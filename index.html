@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>成语贪吃蛇</title>
+<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+<div id="gameContainer">
+    <div id="header">
+        <div id="idiomDisplay"></div>
+    </div>
+    <div id="info">
+        <span id="score">得分: 0</span>
+        <span id="level">第 1 关</span>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+        <div class="row">
+            <button class="ctrl-btn" data-dir="up">▲</button>
+        </div>
+        <div class="row">
+            <button class="ctrl-btn" data-dir="left">◀</button>
+            <button class="ctrl-btn" data-dir="down">▼</button>
+            <button class="ctrl-btn" data-dir="right">▶</button>
+        </div>
+    </div>
+    <div id="stageInfo"></div>
+</div>
+
+<div id="overlay">
+    <h1>成语贪吃蛇</h1>
+    <p>按顺序吃掉成语中的汉字<br>穿墙而过，撞到自己会死</p>
+    <button class="btn" id="startBtn">开始游戏</button>
+</div>
+
+<script src="js/js.js"></script>
+</body>
+</html>

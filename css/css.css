@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    overflow: hidden;
+    color: #eee;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
+}
+
+#idiomDisplay {
+    font-size: 28px;
+    letter-spacing: 8px;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+#idiomDisplay .filled {
+    color: #ffd700;
+}
+
+#idiomDisplay .empty {
+    color: rgba(255, 215, 0, 0.2);
+    border-bottom: 2px dashed rgba(255, 215, 0, 0.4);
+    padding-bottom: 2px;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
+    font-size: 16px;
+}
+
+#info span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+#score {
+    color: #00d2ff;
+}
+
+#level {
+    color: #ff6b6b;
+}
+
+canvas {
+    border: 2px solid #16213e;
+    border-radius: 4px;
+    background: #0f3460;
+    box-shadow: 0 0 30px rgba(15, 52, 96, 0.5), inset 0 0 60px rgba(0, 0, 0, 0.3);
+}
+
+#overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 16px;
+    padding: 40px 60px;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+}
+
+#overlay h1 {
+    font-size: 36px;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+#overlay h2 {
+    font-size: 24px;
+    color: #ff6b6b;
+}
+
+#overlay p {
+    font-size: 18px;
+    color: #ccc;
+    text-align: center;
+    line-height: 1.6;
+}
+
+#overlay .btn {
+    padding: 12px 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-family: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+#overlay .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+#overlay .btn:active {
+    transform: translateY(0);
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+#controls .row {
+    display: flex;
+    gap: 4px;
+}
+
+#controls .ctrl-btn {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: background 0.15s;
+}
+
+#controls .ctrl-btn:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#stageInfo {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 4px;
+}
